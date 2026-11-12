@@ -1,0 +1,25 @@
+# Symmetry Audit Limits
+
+This repository studies the quantitative cost of auditing the instantaneous-symmetry assumption behind a three-qubit interaction witness. The authoritative scientific account is organized by topic under science/.
+
+## Essential distinctions
+
+- The exact symmetry/locality determinant invariant and interaction-witness idea are inherited.
+- The null includes arbitrary time-dependent two-local Hamiltonians on exactly three qubits with a known bound on the complete operator norm; hidden mediators and additional levels are excluded.
+- Universal lower bounds allow arbitrary intrasector nuisance unitaries. Matching attainment is established for the family exp(-i theta ZZZ), not every endpoint.
+- Temporal mean, uniform basis-averaged leakage and worst-input leakage are different constraints. The sharp coefficient is a fixed-positive-phase, large-JT asymptotic.
+- The audit-shot optimum concerns ordinary parity-definite preparation and parity-only intermediate measurement. It is not an unrestricted coherent-query or Hamiltonian-learning lower bound.
+- Endpoint phase estimation, every repeated prefix, reference width, known operations and finite timing are charged. No practical noisy-hardware crossover is established.
+- A phase-resolution floor is fixed before data collection; estimates below it return inconclusive. Hard caps hold on every branch, and matched shot scaling concerns the declared resolved-phase class.
+
+## Question routes
+
+- Story, measured quantity and certificate: README.md; science/model.md.
+- Principal-block determinant derivative and universal mean converse: science/phase-leakage.md.
+- Exact controls, leading constants, bandwidth and fixed observation grids: science/constructions.md.
+- General endpoint blocks, finite endpoint tomography, confidence allocation and matched ordinary-shot cost: science/audit-protocol.md.
+- Prefix time, reference width, timing bits, classical cost and limitations: science/resources.md.
+- Precise inherited theorems and primary comparison: references/related-work.md; references/references.bib.
+- Portable finite verification and expected outputs: verification/README.md; verification/run_checks.py; verification/results.json.
+
+The full connected reading route is science/README.md. Read actual hypotheses before transferring a result to a different process or observation model. Numerical matrix checks support stated finite consequences and do not replace the universal proofs.

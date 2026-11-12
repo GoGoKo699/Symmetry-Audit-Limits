@@ -1,0 +1,177 @@
+{
+  "algebra": {
+    "local_nonidentity_basis_size": 36,
+    "max_two_local_parity_trace": 0.0,
+    "pauli_identity_error": 0.0
+  },
+  "endpoint_and_confidence": {
+    "calculated_resource_example": {
+      "audit_probability_floor": 2.19548661991e-06,
+      "audit_shots": 1680211,
+      "declared_resolution_floor": 0.05,
+      "delta_audit": 0.025,
+      "delta_endpoint": 0.025,
+      "duration": 10.0,
+      "endpoint_shots": 104009306310,
+      "endpoint_shots_per_setting": 25399098,
+      "expected_unknown_audit_time": 8401055.0,
+      "false_certificate_probability_upper_bound": 0.05,
+      "hard_audit_cap_all_endpoint_outcomes": 18887063,
+      "hard_stopping_bin_cap_all_endpoint_outcomes": 11314,
+      "no_event_probability_upper_bound": 0.0249998658889,
+      "simulated_shots": 0,
+      "stopping_bins": 3375,
+      "stopping_spacing": 0.00296296296296,
+      "strength": 1.0,
+      "unknown_endpoint_time": 1040093063100.0
+    },
+    "endpoint": {
+      "actual_phase_aligned_matrix_error": 0.00117453750873,
+      "actual_state_frobenius_error": 0.00461036854312,
+      "estimated_block_min_singular_value": 0.999432714898,
+      "estimated_phase_distance": 0.199919174883,
+      "exact_reconstruction_error": 1.19067199373e-16,
+      "expectation_tolerance": 0.001,
+      "matrix_radius": 0.0322580645161,
+      "max_deterministic_expectation_perturbation": 0.000999911030248,
+      "pauli_observables": 4095,
+      "perturbation_seed": 520430,
+      "phase_lower_bound": 0.167637193769,
+      "singular_endpoint_inconclusive": true,
+      "state_radius": 0.008,
+      "sub_resolution_phase_inconclusive": true,
+      "true_phase_distance": 0.2
+    }
+  },
+  "grid_cycles": {
+    "cases": [
+      {
+        "cells_for_winding_check": 100,
+        "circular_phase_distance": 0.159195277946,
+        "endpoint_error": 1.51517849502e-16,
+        "peak_leakage": 0.00101321183642,
+        "phase_over_J2_h2": 0.159195277946,
+        "phase_per_cell": 0.00159195277946,
+        "spacing": 0.1
+      },
+      {
+        "cells_for_winding_check": 100,
+        "circular_phase_distance": 0.135121396957,
+        "endpoint_error": 1.14565039044e-16,
+        "peak_leakage": 0.00911890652781,
+        "phase_over_J2_h2": 0.159519436649,
+        "phase_per_cell": 0.0143567492984,
+        "spacing": 0.3
+      },
+      {
+        "cells_for_winding_check": 100,
+        "circular_phase_distance": 0.152906779303,
+        "endpoint_error": 2.76539565133e-16,
+        "peak_leakage": 0.101321183642,
+        "phase_over_J2_h2": 0.16340454652,
+        "phase_per_cell": 0.16340454652,
+        "spacing": 1.0
+      }
+    ],
+    "zero_obstruction_theta": 0.785398163397
+  },
+  "latitudes": {
+    "cases": [
+      {
+        "duration": 1.24350110879,
+        "endpoint_error": 1.66533453694e-16,
+        "epsilon": 0.1,
+        "forbidden_coefficient": 5.55111512313e-17,
+        "generator_norm_error": 2.22044604925e-16,
+        "generator_span_error": 6.38324947203e-17,
+        "max_leakage": 0.1,
+        "quadrature_error": 1.38777878078e-17,
+        "scaled_duration": 1.96614788837
+      },
+      {
+        "duration": 2.19030971654,
+        "endpoint_error": 6.75322301446e-16,
+        "epsilon": 0.01,
+        "forbidden_coefficient": 3.22658566532e-16,
+        "generator_norm_error": 2.22044604925e-16,
+        "generator_span_error": 3.86169862892e-16,
+        "max_leakage": 0.01,
+        "quadrature_error": 0.0,
+        "scaled_duration": 1.09515485827
+      },
+      {
+        "duration": 6.38464835059,
+        "endpoint_error": 2.77611261758e-15,
+        "epsilon": 0.001,
+        "forbidden_coefficient": 1.0852592696e-15,
+        "generator_norm_error": 1.11022302463e-16,
+        "generator_span_error": 2.16308344219e-15,
+        "max_leakage": 0.001,
+        "quadrature_error": 1.73472347598e-18,
+        "scaled_duration": 1.00950154235
+      },
+      {
+        "duration": 20.0190003083,
+        "endpoint_error": 4.53868419705e-14,
+        "epsilon": 0.0001,
+        "forbidden_coefficient": 1.07234862402e-14,
+        "generator_norm_error": 1.11022302463e-16,
+        "generator_span_error": 1.36462293392e-14,
+        "max_leakage": 0.0001,
+        "quadrature_error": 4.33680868994e-19,
+        "scaled_duration": 1.00095001542
+      }
+    ],
+    "independent_ode_endpoint_error": 7.38546095109e-12,
+    "max_weight_above_two": 1.07234862402e-14,
+    "strength": 1.0,
+    "theta": 0.2
+  },
+  "passed": true,
+  "phase_derivatives": {
+    "cases": 64,
+    "max_finite_difference_error": 4.80130379898e-11,
+    "max_frobenius_bound_ratio": 0.249851605265,
+    "max_identity_error": 3.67761376907e-16,
+    "max_worst_bound_ratio": 0.172540944883,
+    "seed": 7491
+  },
+  "scope": "Finite matrix and numerical-budget diagnostics; universal claims require the proofs in science/.",
+  "temporal_means": {
+    "cases": [
+      {
+        "action": 5.0,
+        "alpha": 0.0406385751751,
+        "mean_leakage": 0.0016326995073,
+        "quadrature_error": 3.46944695195e-18,
+        "scaled_mean": 1.02043719207
+      },
+      {
+        "action": 10.0,
+        "alpha": 0.0200779371494,
+        "mean_leakage": 0.000401990382293,
+        "quadrature_error": 0.0,
+        "scaled_mean": 1.00497595573
+      },
+      {
+        "action": 30.0,
+        "alpha": 0.00666953332764,
+        "mean_leakage": 4.44688297584e-05,
+        "quadrature_error": 0.0,
+        "scaled_mean": 1.00054866956
+      },
+      {
+        "action": 100.0,
+        "alpha": 0.00200007733931,
+        "mean_leakage": 4.00019735021e-06,
+        "quadrature_error": 2.16840434497e-19,
+        "scaled_mean": 1.00004933755
+      }
+    ],
+    "theta_fixed": 0.2
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  }
+}
