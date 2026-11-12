@@ -44,6 +44,14 @@ jobs:
             --revision "$CAPTURE_REVISION" \
             --page science/model.md \
             --output "$RUNNER_TEMP/hosted-probe"
+      - name: Retain the representative diagnostic
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: hosted-probe-${{ env.CAPTURE_REVISION }}
+          path: ${{ runner.temp }}/hosted-probe
+          if-no-files-found: error
+          retention-days: 14
       - name: Compare every hosted mathematical expression
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
