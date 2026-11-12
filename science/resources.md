@@ -9,7 +9,7 @@ Let $`a=JT`$ and declare a phase-resolution floor $`g\in(0,\pi/32]`$ before coll
 | Resource | Required access or accounting |
 | --- | --- |
 | Unknown device | One repeatable three-qubit unitary waveform $`U(t)`$ on $`0\leq t\leq T`$; no retained hidden quantum state between runs. |
-| Strength information | A trusted almost-everywhere bound $`\|H(t)\|\leq J`$ in a common scalar-phase convention. This is an assumption, not inferred from endpoint tomography. |
+| Strength information | A trusted almost-everywhere bound $`\Vert H(t)\Vert \leq J`$ in a common scalar-phase convention. This is an assumption, not inferred from endpoint tomography. |
 | Unknown evolution call | A physical evolution prefix from zero to the chosen stopping time; every repeated prefix is charged. |
 | Stopping | Private random choice, implemented to the stated mesh accuracy; the fixed waveform cannot adapt to that choice. |
 | Audit input and output | Fresh computational-basis positive-parity input and a trusted parity readout; one retained leakage bit per audit run. |

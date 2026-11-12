@@ -43,7 +43,7 @@ The linked scientific statements and proofs are authoritative. This map does not
 ### M05 — Distinguish worst-input and averaged leakage
 
 - **Central question:** Which parity-transfer quantity is measured by simple basis preparations?
-- **Understanding target:** Separate $`q^2=\|C\|^2`$ from $`\ell=\mathrm{tr}(C^\dagger C)/4`$. Explain $`\ell\leq q^2\leq4\ell`$ and why uniformly preparing the four positive-parity basis inputs measures $`\ell`$.
+- **Understanding target:** Separate $`q^2=\Vert C\Vert ^2`$ from $`\ell=\mathrm{tr}(C^\dagger C)/4`$. Explain $`\ell\leq q^2\leq4\ell`$ and why uniformly preparing the four positive-parity basis inputs measures $`\ell`$.
 - **Dependencies and story role:** Uses M04 to turn off-diagonal blocks into probabilities and to identify the accessible quantity needed later.
 - **Conceptual connection:** The largest singular value describes an optimized input; a Frobenius norm describes a basis average without locating that input.
 - **Sources:** Anchor §§1.2.2–1.2.3, 2.5.3; [phase–leakage model](../science/phase-leakage.md#model-and-observable-phase) and [audit access](../science/audit-protocol.md#device-and-access-contract).
@@ -83,7 +83,7 @@ The linked scientific statements and proofs are authoritative. This map does not
 ### M10 — Turn strength into temporal regularity
 
 - **Central question:** What can a norm bound say about dynamics between observed times?
-- **Understanding target:** Explain $`\|U(t)-U(s)\|\leq J|t-s|`$ and the resulting Lipschitz bounds for $`q`$ and $`\sqrt\ell`$. Recognize $`L=JT`$ as a dimensionless action budget.
+- **Understanding target:** Explain $`\Vert U(t)-U(s)\Vert \leq J|t-s|`$ and the resulting Lipschitz bounds for $`q`$ and $`\sqrt\ell`$. Recognize $`L=JT`$ as a dimensionless action budget.
 - **Dependencies and story role:** Combines M02–M05 into the regularity tool needed for hidden-trajectory reasoning.
 - **Conceptual connection:** Bounded strength limits how quickly leakage can rise, even when pulse switching and bandwidth are unrestricted.
 - **Sources:** Anchor §§7.1, 7.4.1; [temporal-mean proof](../science/phase-leakage.md#a-true-temporal-mean-without-a-ceiling) and [grid guarantee](../science/constructions.md#what-a-deterministic-observation-grid-guarantees).

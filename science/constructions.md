@@ -183,7 +183,7 @@ For a uniform grid of spacing $`h`$ with exact sampled symmetry, this becomes
 
 The phase of an approximately implemented target is treated by replacing $`\vartheta(W)`$ with $`\vartheta_{\rm eff}`$ as defined in [phase-leakage.md](phase-leakage.md).
 
-A basis-averaged grid certificate is also possible. The function $`\sqrt{\ell(t)}`$ is $`J`$-Lipschitz. One proof differentiates $`\ell=\|C\|_F^2/4`$ and uses $`|\dot\ell|\le2J\sqrt\ell`$; the zero points follow by continuity. If $`\ell(t_j)\le\eta^2`$ and $`\eta+Jh_{\max}/2<1/2`$, the same numerator is valid with denominator
+A basis-averaged grid certificate is also possible. The function $`\sqrt{\ell(t)}`$ is $`J`$-Lipschitz. One proof differentiates $`\ell=\Vert C\Vert _F^2/4`$ and uses $`|\dot\ell|\le2J\sqrt\ell`$; the zero points follow by continuity. If $`\ell(t_j)\le\eta^2`$ and $`\eta+Jh_{\max}/2<1/2`$, the same numerator is valid with denominator
 
 ```math
 \sqrt{1-4(\eta+Jh_{\max}/2)^2}.

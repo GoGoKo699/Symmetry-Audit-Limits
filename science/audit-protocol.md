@@ -12,7 +12,7 @@ The device consists of exactly three evolving qubits. In each fresh run it imple
 \dot U(t)=-iH(t)U(t),\qquad U(0)=I,\qquad 0\leq t\leq T.
 ```
 
-The Hamiltonian can depend arbitrarily on time, but a trusted bound $`\|H(t)\|\leq J`$ holds almost everywhere. A purely scalar Hamiltonian can be removed by a common phase convention; none of the measured quantities depends on that convention. The alternative to be excluded allows every such time-dependent Hamiltonian whose Pauli expansion has support on at most two qubits. It includes arbitrary single-qubit fields, all pairs, and arbitrary driving frequency. There is no bandwidth assumption.
+The Hamiltonian can depend arbitrarily on time, but a trusted bound $`\Vert H(t)\Vert \leq J`$ holds almost everywhere. A purely scalar Hamiltonian can be removed by a common phase convention; none of the measured quantities depends on that convention. The alternative to be excluded allows every such time-dependent Hamiltonian whose Pauli expansion has support on at most two qubits. It includes arbitrary single-qubit fields, all pairs, and arbitrary driving frequency. There is no bandwidth assumption.
 
 Preparation, parity measurement, reference isolation during endpoint tomography, and the advertised timing accuracy are trusted. Each run starts afresh; an unmodelled environment or controller that retains quantum information between runs is outside this three-qubit unitary model. The stopping time is selected privately after the repeatable waveform has been fixed. The device cannot change that waveform in response to the chosen stopping time. Preparing an input or stopping one run does not alter subsequent runs.
 
@@ -32,7 +32,7 @@ U(t)=\begin{pmatrix} A(t)&B(t)\\C(t)&D(t)\end{pmatrix},
 Define the worst-input leakage amplitude and the uniformly averaged leakage probability by
 
 ```math
-q(t)=\|C(t)\|,\qquad
+q(t)=\Vert C(t)\Vert ,\qquad
 \ell(t)=\frac{1}{4}\mathrm{Tr}[C(t)^\dagger C(t)],\qquad
 \bar\ell=\frac{1}{T}\int_0^T\ell(t)\,dt.
 ```
@@ -69,7 +69,7 @@ Thus unknown symmetric nuisance dynamics need not be reconstructed. This exact d
 
 ## A leakage lower bound without exact endpoint return
 
-**Proposition.** Suppose $`H(t)`$ is at most two-local, $`\|H(t)\|\leq J`$, and the endpoint blocks are invertible. Set $`\theta=\vartheta(U)>0`$. Then
+**Proposition.** Suppose $`H(t)`$ is at most two-local, $`\Vert H(t)\Vert \leq J`$, and the endpoint blocks are invertible. Set $`\theta=\vartheta(U)>0`$. Then
 
 ```math
 \boxed{\quad \bar\ell\geq\frac{\theta^2}{32(JT)^2}.\quad}
@@ -81,7 +81,7 @@ The constant is a convenient uniform bound, not the sharp finite-action constant
 
 ```math
 \sigma_{\min}(A),\sigma_{\min}(D)\geq\sqrt{1-q^2},
-\qquad \|B\|_{\mathrm F}=\|C\|_{\mathrm F}.
+\qquad \Vert B\Vert _{\mathrm F}=\Vert C\Vert _{\mathrm F}.
 ```
 
 Consequently the continuously unwrapped phase
@@ -98,7 +98,7 @@ is well defined on any interval with $`q<1`$. Differentiating the two determinan
 +\mathrm{Re}\mathrm{Tr}(D^{-1}H_{-+}B).
 ```
 
-For a two-local Hamiltonian, $`\mathrm{Tr}(\Pi H)=0`$, so the first two terms cancel. Frobenius Cauchy–Schwarz, $`\|H_{+-}\|_{\mathrm F}\leq2J`$, and $`\|C\|_{\mathrm F}=2\sqrt\ell`$ give
+For a two-local Hamiltonian, $`\mathrm{Tr}(\Pi H)=0`$, so the first two terms cancel. Frobenius Cauchy–Schwarz, $`\Vert H_{+-}\Vert _{\mathrm F}\leq2J`$, and $`\Vert C\Vert _{\mathrm F}=2\sqrt\ell`$ give
 
 ```math
 |\dot\Phi(t)|\leq\frac{8J\sqrt{\ell(t)}}{\sqrt{1-q(t)^2}}.
@@ -112,7 +112,7 @@ If $`q(t)<1/2`$ throughout, the endpoint phase has shortest distance $`8\theta`$
 \bar\ell\geq\frac{3\theta^2}{4a^2}.
 ```
 
-If $`q`$ reaches $`1/2`$, use $`q(0)=0`$ and the $`J`$-Lipschitz property of $`q`$, which follows from $`\|\dot U\|\leq J`$. The fastest possible initial rise to any peak $`r`$ has
+If $`q`$ reaches $`1/2`$, use $`q(0)=0`$ and the $`J`$-Lipschitz property of $`q`$, which follows from $`\Vert \dot U\Vert \leq J`$. The fastest possible initial rise to any peak $`r`$ has
 
 ```math
 \int_0^Tq(t)^2\,dt\geq\frac{r^3}{3J}.
@@ -147,11 +147,11 @@ with probability at least $`1-\delta_E`$. The Hermitian linear-inversion estimat
 \widehat\rho=\frac{1}{D}\left(I+\sum_{P\ne I}\widehat r_PP\right)
 ```
 
-satisfies $`\|\widehat\rho-\rho_U\|\leq\|\widehat\rho-\rho_U\|_{\mathrm F}\leq e`$, with $`e=8s`$. Choose $`e<1/2`$. Let $`|v\rangle`$ be a normalized top eigenvector of $`\widehat\rho`$, and reshape it as $`V=\sqrt8\mathrm{mat}v`$. Then, for some unobservable common phase $`\varphi`$,
+satisfies $`\Vert \widehat\rho-\rho_U\Vert \leq\Vert \widehat\rho-\rho_U\Vert _{\mathrm F}\leq e`$, with $`e=8s`$. Choose $`e<1/2`$. Let $`|v\rangle`$ be a normalized top eigenvector of $`\widehat\rho`$, and reshape it as $`V=\sqrt8\mathrm{mat}v`$. Then, for some unobservable common phase $`\varphi`$,
 
 ```math
-\|V-e^{i\varphi}U(T)\|\leq
-\|V-e^{i\varphi}U(T)\|_{\mathrm F}
+\Vert V-e^{i\varphi}U(T)\Vert \leq
+\Vert V-e^{i\varphi}U(T)\Vert _{\mathrm F}
 \leq t,\qquad t=\frac{4e}{1-e}.
 ```
 
@@ -274,7 +274,7 @@ Ramp $`\alpha`$ from zero to $`\alpha_0`$ at rate $`J`$, initially holding $`\va
 \dot\varphi=-J\cot2\alpha_0.
 ```
 
-The coefficient of $`\Pi`$ vanishes, $`H`$ lies in the two-local span of $`A_0,B_0`$, and $`\|H\|=J`$. Moreover, $`(\varphi+\psi)'=J\tan\alpha_0`$. After accumulating phase $`\theta`$, hold $`\varphi,\psi`$ fixed and ramp $`\alpha`$ back to zero at rate $`J`$. The exact duration and endpoint are
+The coefficient of $`\Pi`$ vanishes, $`H`$ lies in the two-local span of $`A_0,B_0`$, and $`\Vert H\Vert =J`$. Moreover, $`(\varphi+\psi)'=J\tan\alpha_0`$. After accumulating phase $`\theta`$, hold $`\varphi,\psi`$ fixed and ramp $`\alpha`$ back to zero at rate $`J`$. The exact duration and endpoint are
 
 ```math
 JT=\theta\cot\alpha_0+2\alpha_0,

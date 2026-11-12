@@ -12,7 +12,7 @@ Endpoint symmetry is insufficient. A two-local control can leave a parity sector
 
 The device Hilbert space is exactly $`(\mathbb C^2)^{\otimes3}`$. Each run implements the same propagator on $`[0,T]`$, beginning at identity. There are no additional evolving levels, ancillary systems, measurements, resets, retained quantum controller or unknown environment in the tested process. An observer's isolated references used for endpoint measurements do not interact with it.
 
-The known strength assumption is a uniform operator-norm bound $`\|H(t)\|\le J`$ almost everywhere, in a common scalar-phase convention. A scalar term does not affect any measured phase difference or transition probability. The bound concerns the complete Hamiltonian, including all simultaneous controls; the decomposition into local terms does not supply separate budgets. Units have $`\hbar=1`$.
+The known strength assumption is a uniform operator-norm bound $`\Vert H(t)\Vert \le J`$ almost everywhere, in a common scalar-phase convention. A scalar term does not affect any measured phase difference or transition probability. The bound concerns the complete Hamiltonian, including all simultaneous controls; the decomposition into local terms does not supply separate budgets. Units have $`\hbar=1`$.
 
 The null model contains every such Hamiltonian whose Pauli expansion has weight at most two, with arbitrary real time-dependent coefficients. All pairs and single-qubit fields are admitted. There is no limit on pulse count or driving bandwidth. This makes the converse robust to driven two-local synthesis, while the matching construction's required bandwidth remains a resource qualification.
 
@@ -30,7 +30,7 @@ The principal quantities are:
 
 | Symbol | Meaning |
 | --- | --- |
-| $`q(t)=\|C(t)\|=\|B(t)\|`$ | Largest parity-transition amplitude over a definite-parity input. |
+| $`q(t)=\Vert C(t)\Vert =\Vert B(t)\Vert `$ | Largest parity-transition amplitude over a definite-parity input. |
 | $`\ell(t)=\mathrm{tr}(C^\dagger C)/4`$ | Transition probability from a uniformly chosen positive-parity computational-basis input; equal to averaging over all eight basis inputs. |
 | $`\bar\ell=T^{-1}\int_0^T\ell(t)dt`$ | Space-and-time averaged physical transition probability. |
 | $`L=JT`$ | Dimensionless strength–duration budget. |

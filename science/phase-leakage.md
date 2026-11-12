@@ -10,7 +10,7 @@ Work on exactly three qubits, with no additional quantum system, and set $`\hbar
 \Pi=Z_1Z_2Z_3,\qquad P_\pm=\frac{I\pm\Pi}{2}.
 ```
 
-Both parity sectors have dimension $`d=4`$. Let $`H(t)`$ be a measurable Hermitian Hamiltonian that is a sum of terms supported on at most two qubits. Assume $`\|H(t)\|\le J`$, where $`J>0`$ bounds the norm of the complete Hamiltonian. Let
+Both parity sectors have dimension $`d=4`$. Let $`H(t)`$ be a measurable Hermitian Hamiltonian that is a sum of terms supported on at most two qubits. Assume $`\Vert H(t)\Vert \le J`$, where $`J>0`$ bounds the norm of the complete Hamiltonian. Let
 
 ```math
 \dot U(t)=-iH(t)U(t),\qquad U(0)=I.
@@ -24,13 +24,13 @@ In the parity decomposition write
 U(t)=
 \begin{pmatrix}A(t)&B(t)\\C(t)&D(t)\end{pmatrix},
 \qquad
-q(t)=\|C(t)\|=\|B(t)\|.
+q(t)=\Vert C(t)\Vert =\Vert B(t)\Vert .
 ```
 
 Thus $`q(t)^2`$ is the largest parity-transition probability over a parity-definite input. Unitarity gives the equality of the two operator norms. The probability averaged uniformly over the eight computational-basis inputs is
 
 ```math
-\ell(t)=\frac{\|B(t)\|_F^2+\|C(t)\|_F^2}{8}
+\ell(t)=\frac{\Vert B(t)\Vert _F^2+\Vert C(t)\Vert _F^2}{8}
 =\frac{\mathrm{tr}[C(t)^\dagger C(t)]}{4}.
 ```
 
@@ -100,14 +100,14 @@ The two direct traces cancel in their difference, while the off-diagonal terms c
 
 ```math
 A^\dagger A=I-C^\dagger C,
-\qquad \|A^{-1}\|\le(1-q^2)^{-1/2}.
+\qquad \Vert A^{-1}\Vert \le(1-q^2)^{-1/2}.
 ```
 
-Using $`|\mathrm{tr}X|\le4\|X\|`$ proves the first bound. For the second use
+Using $`|\mathrm{tr}X|\le4\Vert X\Vert `$ proves the first bound. For the second use
 
 ```math
-\|H_{+-}\|_F\le2J,\qquad
-\|CA^{-1}\|_F\le
+\Vert H_{+-}\Vert _F\le2J,\qquad
+\Vert CA^{-1}\Vert _F\le
 \frac{2\sqrt\ell}{\sqrt{1-q^2}},
 ```
 
@@ -163,7 +163,7 @@ The next bound does not assume small leakage at every instant. It also allows pa
 \overline\ell\ge\frac{\vartheta(W)^2}{8L^2}.
 ```
 
-**Proof.** The function $`q`$ is $`J`$-Lipschitz, because $`\|U(t)-U(s)\|\le J|t-s|`$. Also $`q(0)=q(T)=0`$.
+**Proof.** The function $`q`$ is $`J`$-Lipschitz, because $`\Vert U(t)-U(s)\Vert \le J|t-s|`$. Also $`q(0)=q(T)=0`$.
 
 If $`q(t)<1/2`$ for all $`t`$, Lemma 1 and Cauchy-Schwarz give
 
@@ -225,7 +225,7 @@ The order of limits is fixed: the endpoint phase $`\theta`$ stays positive while
 An approximate endpoint does not have to commute exactly with parity. Compare it to an explicitly specified parity-preserving unitary $`W`$ using phase-optimized operator norm:
 
 ```math
-\inf_\chi\|U(T)-e^{i\chi}W\|\le\delta<1.
+\inf_\chi\Vert U(T)-e^{i\chi}W\Vert \le\delta<1.
 ```
 
 Define
@@ -237,7 +237,7 @@ Define
 
 Every conclusion of Theorem 2 remains true with $`\vartheta(W)`$ replaced by $`\vartheta_{\rm eff}`$. This includes its integrated inequality when $`q<1`$ throughout, and both uniform-ceiling bounds.
 
-To see the endpoint correction, set $`E_+=e^{-i\chi}AW_+^\dagger`$ and similarly $`E_-=e^{-i\chi}DW_-^\dagger`$. Each satisfies $`\|E_\pm-I\|\le\delta`$. Every eigenvalue lies in the disk of radius $`\delta`$ about $`1`$, so its argument has absolute value at most $`\arcsin\delta`$. Each rank-four determinant phase changes by at most $`4\arcsin\delta`$; their ratio changes by at most $`8\arcsin\delta`$. Circular triangle inequality and the integrated phase identity give the result.
+To see the endpoint correction, set $`E_+=e^{-i\chi}AW_+^\dagger`$ and similarly $`E_-=e^{-i\chi}DW_-^\dagger`$. Each satisfies $`\Vert E_\pm-I\Vert \le\delta`$. Every eigenvalue lies in the disk of radius $`\delta`$ about $`1`$, so its argument has absolute value at most $`\arcsin\delta`$. Each rank-four determinant phase changes by at most $`4\arcsin\delta`$; their ratio changes by at most $`8\arcsin\delta`$. Circular triangle inequality and the integrated phase identity give the result.
 
 This is an operator-norm endpoint statement. It does not silently substitute fidelity or diamond distance for $`\delta`$. The exact-endpoint temporal-mean bounds above retain their stated endpoint hypothesis.
 
