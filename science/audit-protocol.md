@@ -69,7 +69,7 @@ Thus unknown symmetric nuisance dynamics need not be reconstructed. This exact d
 
 ## A leakage lower bound without exact endpoint return
 
-**Proposition.** Suppose $`H(t)`$ is at most two-local, $`\Vert H(t)\Vert \leq J`$, and the endpoint blocks are invertible. Set $`\theta=\vartheta(U)>0`$. Then
+**Proposition.** Suppose $`H(t)`$ is at most two-local, $`\Vert H(t)\Vert \leq J`$, and the endpoint blocks are invertible. Set $`\theta=\vartheta(U)\gt 0`$. Then
 
 ```math
 \boxed{\quad \bar\ell\geq\frac{\theta^2}{32(JT)^2}.\quad}
@@ -77,7 +77,7 @@ Thus unknown symmetric nuisance dynamics need not be reconstructed. This exact d
 
 The constant is a convenient uniform bound, not the sharp finite-action constant. If the endpoint preserves parity exactly, the same argument improves $`32`$ to $`8`$. In either case the sharp fixed-$`\theta`$, large-$`JT`$ leading coefficient is one.
 
-**Proof.** At every time where $`q<1`$, unitarity gives
+**Proof.** At every time where $`q\lt 1`$, unitarity gives
 
 ```math
 \sigma_{\min}(A),\sigma_{\min}(D)\geq\sqrt{1-q^2},
@@ -90,7 +90,7 @@ Consequently the continuously unwrapped phase
 \Phi(t)=\arg\det A(t)-\arg\det D(t),\qquad \Phi(0)=0,
 ```
 
-is well defined on any interval with $`q<1`$. Differentiating the two determinants yields
+is well defined on any interval with $`q\lt 1`$. Differentiating the two determinants yields
 
 ```math
 \dot\Phi=-\mathrm{Tr}H_{++}+\mathrm{Tr}H_{--}
@@ -104,7 +104,7 @@ For a two-local Hamiltonian, $`\mathrm{Tr}(\Pi H)=0`$, so the first two terms ca
 |\dot\Phi(t)|\leq\frac{8J\sqrt{\ell(t)}}{\sqrt{1-q(t)^2}}.
 ```
 
-If $`q(t)<1/2`$ throughout, the endpoint phase has shortest distance $`8\theta`$ from zero, and therefore
+If $`q(t)\lt 1/2`$ throughout, the endpoint phase has shortest distance $`8\theta`$ from zero, and therefore
 
 ```math
 8\theta\leq\frac{16J}{\sqrt3}\int_0^T\sqrt{\ell(t)}\,dt,
@@ -118,13 +118,13 @@ If $`q`$ reaches $`1/2`$, use $`q(0)=0`$ and the $`J`$-Lipschitz property of $`q
 \int_0^Tq(t)^2\,dt\geq\frac{r^3}{3J}.
 ```
 
-Because $`\ell\geq q^2/4`$, a peak of $`1/2`$ implies $`\bar\ell\geq1/(96a)`$ and $`a\geq1/2`$. As $`3\theta^2\leq3(\pi/8)^2<1/2\leq a`$, this is at least $`\theta^2/(32a^2)`$. This case does not use a determinant phase at intermediate singular blocks. The two cases prove the proposition. If $`q(T)=0`$, the fall from the peak doubles the triangular area, giving the stated constant $`8`$. □
+Because $`\ell\geq q^2/4`$, a peak of $`1/2`$ implies $`\bar\ell\geq1/(96a)`$ and $`a\geq1/2`$. As $`3\theta^2\leq3(\pi/8)^2\lt 1/2\leq a`$, this is at least $`\theta^2/(32a^2)`$. This case does not use a determinant phase at intermediate singular blocks. The two cases prove the proposition. If $`q(T)=0`$, the fall from the peak doubles the triangular area, giving the stated constant $`8`$. □
 
 For completeness, the leading coefficient one follows by choosing the peak threshold $`r=a^{-1/4}`$. Below that threshold the determinant argument gives $`\bar\ell\geq(1-r^2)\theta^2/a^2`$. Above it the one-sided triangular estimate gives $`\bar\ell\geq r^3/(12a)=a^{-7/4}/12`$, which is larger than $`\theta^2/a^2`$ for fixed $`\theta`$ and sufficiently large $`a`$. The exact construction below supplies the matching upper bound.
 
 ## Finite endpoint measurements
 
-Before acquiring any data, declare a phase-resolution floor $`g\in(0,\pi/32]`$, endpoint measurement resolution, and failure budgets $`\delta_E,\delta_A`$. The endpoint procedure returns a certified lower bound $`\theta_0\leq\vartheta(U)`$, rather than assuming an exactly known target. A failed conditioning check or a value $`\theta_0<g`$ returns **inconclusive**. The fixed floor prevents an arbitrarily small positive random estimate from causing an unbounded audit budget.
+Before acquiring any data, declare a phase-resolution floor $`g\in(0,\pi/32]`$, endpoint measurement resolution, and failure budgets $`\delta_E,\delta_A`$. The endpoint procedure returns a certified lower bound $`\theta_0\leq\vartheta(U)`$, rather than assuming an exactly known target. A failed conditioning check or a value $`\theta_0\lt g`$ returns **inconclusive**. The fixed floor prevents an arbitrarily small positive random estimate from causing an unbounded audit budget.
 
 Here is an explicit, deliberately unoptimized implementation with ordinary independent shots. Prepare three Bell pairs between the device and three isolated reference qubits, apply $`U(T)`$ to the device halves, and perform Pauli tomography on the six-qubit Choi state
 
@@ -147,7 +147,7 @@ with probability at least $`1-\delta_E`$. The Hermitian linear-inversion estimat
 \widehat\rho=\frac{1}{D}\left(I+\sum_{P\ne I}\widehat r_PP\right)
 ```
 
-satisfies $`\Vert \widehat\rho-\rho_U\Vert \leq\Vert \widehat\rho-\rho_U\Vert _{\mathrm F}\leq e`$, with $`e=8s`$. Choose $`e<1/2`$. Let $`|v\rangle`$ be a normalized top eigenvector of $`\widehat\rho`$, and reshape it as $`V=\sqrt8\mathrm{mat}v`$. Then, for some unobservable common phase $`\varphi`$,
+satisfies $`\Vert \widehat\rho-\rho_U\Vert \leq\Vert \widehat\rho-\rho_U\Vert _{\mathrm F}\leq e`$, with $`e=8s`$. Choose $`e\lt 1/2`$. Let $`|v\rangle`$ be a normalized top eigenvector of $`\widehat\rho`$, and reshape it as $`V=\sqrt8\mathrm{mat}v`$. Then, for some unobservable common phase $`\varphi`$,
 
 ```math
 \Vert V-e^{i\varphi}U(T)\Vert \leq
@@ -174,7 +174,7 @@ Include the predeclared numerical matrix and singular-value margins in $`t`$, us
 \quad}
 ```
 
-Indeed, every eigenvalue of $`\widehat A^{-1}e^{i\varphi}A`$ lies within distance $`t/\sigma<1`$ of one, so the difference of its determinant phase has a representative of magnitude at most $`4\arcsin(t/\sigma)`$. The same holds for $`D`$; the common phase cancels. Shortest angular distance is Lipschitz, giving the displayed bound. Numerical matrix and phase errors are known margins, not statistical observations. Certified interval arithmetic is one way to supply them.
+Indeed, every eigenvalue of $`\widehat A^{-1}e^{i\varphi}A`$ lies within distance $`t/\sigma\lt 1`$ of one, so the difference of its determinant phase has a representative of magnitude at most $`4\arcsin(t/\sigma)`$. The same holds for $`D`$; the common phase cancels. Shortest angular distance is Lipschitz, giving the displayed bound. Numerical matrix and phase errors are known margins, not statistical observations. Certified interval arithmetic is one way to supply them.
 
 This procedure assumes the advertised unitary three-qubit model; it is not a test that an arbitrary noisy channel is unitary. For a declared conditioning-resolution target $`\sigma_0\in(0,1]`$, choose the total matrix radius and numerical phase radius before collecting data so that
 
@@ -186,7 +186,7 @@ Soundness does not assume that the actual endpoint obeys this target. Completene
 
 ## Finite timing and the audit decision
 
-Use fresh audit data, independent of the endpoint data. If $`\theta_0<g`$, return inconclusive without executing an audit run. Otherwise choose $`K`$ equal stopping bins of width $`h=T/K`$, with midpoint stopping times
+Use fresh audit data, independent of the endpoint data. If $`\theta_0\lt g`$, return inconclusive without executing an audit run. Otherwise choose $`K`$ equal stopping bins of width $`h=T/K`$, with midpoint stopping times
 
 ```math
 t_j=(j+1/2)h,\qquad j=0,\ldots,K-1.
@@ -249,7 +249,7 @@ If a trusted deterministic stopping error $`r_t`$ is present, so the actual stop
 
 The lower bound concerns precisely the audit class above: each run starts with an input supported in a definite parity sector, the device is stopped at a chosen time, and the retained device datum is whether parity changed. Stopping times and definite-parity inputs may be chosen adaptively from earlier outcomes and any endpoint data. Arbitrary endpoint measurements are allowed in addition, but coherent superpositions of run histories, coherent inverse access, and phase-sensitive intermediate observations are outside this class.
 
-For fixed $`0<\theta\leq\pi/8`$ and sufficiently large $`a=JT`$, consider the honest path generated by $`H_3=(\theta/T)\Pi`$. It has endpoint $`e^{-i\theta\Pi}`$ and no leakage at any time. The following two-local path has the same endpoint and leakage at most $`4\theta^2/a^2`$ at every time.
+For fixed $`0\lt \theta\leq\pi/8`$ and sufficiently large $`a=JT`$, consider the honest path generated by $`H_3=(\theta/T)\Pi`$. It has endpoint $`e^{-i\theta\Pi}`$ and no leakage at any time. The following two-local path has the same endpoint and leakage at most $`4\theta^2/a^2`$ at every time.
 
 Let $`A_0=X_1Z_2`$, $`B_0=Y_1Z_3`$, so $`A_0B_0=i\Pi`$. Parameterize
 
@@ -294,7 +294,7 @@ The no-event evolution within either sector is a scalar phase, so it supplies no
 (1-\delta)(1-p_{\max})^N.
 ```
 
-For $`0<\delta\leq1/4`$, demanding this also be at most $`\delta`$ requires
+For $`0\lt \delta\leq1/4`$, demanding this also be at most $`\delta`$ requires
 
 ```math
 N=\Omega\!\left((JT/\theta)^2\log(1/\delta)\right).

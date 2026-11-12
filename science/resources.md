@@ -30,13 +30,13 @@ M=\left\lceil\frac{2}{s^2}\log\frac{2m}{\delta_E}\right\rceil,
 
 There are exactly $`N_E`$ full unknown evolutions of duration $`T`$, so unknown endpoint evolution time is $`N_ET`$. There are also $`N_E`$ fresh three-Bell-pair preparations, resets, and six-qubit Pauli readouts. All these known circuits have constant size at this fixed dimension; this does not make them physically free.
 
-The linear-inversion confidence radius is $`e=8s<1/2`$. Reshaping the top eigenvector gives a statistical endpoint matrix radius $`4e/(1-e)`$; add the declared numerical matrix and singular-value margins to obtain $`t`$. Use a certified lower singular-value estimate $`\sigma`$, budgeting its error in the same total radius. If $`\sigma>t`$, and $`b_{\mathrm{num}}`$ bounds numerical phase error, the phase lower confidence bound is
+The linear-inversion confidence radius is $`e=8s\lt 1/2`$. Reshaping the top eigenvector gives a statistical endpoint matrix radius $`4e/(1-e)`$; add the declared numerical matrix and singular-value margins to obtain $`t`$. Use a certified lower singular-value estimate $`\sigma`$, budgeting its error in the same total radius. If $`\sigma\gt t`$, and $`b_{\mathrm{num}}`$ bounds numerical phase error, the phase lower confidence bound is
 
 ```math
 \theta_0=\left[\widehat\theta-\arcsin(t/\sigma)-b_{\mathrm{num}}\right]_+.
 ```
 
-If $`\theta_0<g`$ or the conditioning test fails, the audit returns inconclusive at the chosen endpoint resolution. Extra endpoint shots are a possible new run of this same measurement task; they are not silently counted as a successful certificate. Any adaptive repetition of endpoint confidence tests must allocate a summable failure budget or use a valid confidence sequence, rather than reusing $`\delta_E`$ for every attempt. The single-run global cap below does not include an unbounded sequence of such retries.
+If $`\theta_0\lt g`$ or the conditioning test fails, the audit returns inconclusive at the chosen endpoint resolution. Extra endpoint shots are a possible new run of this same measurement task; they are not silently counted as a successful certificate. Any adaptive repetition of endpoint confidence tests must allocate a summable failure budget or use a valid confidence sequence, rather than reusing $`\delta_E`$ for every attempt. The single-run global cap below does not include an unbounded sequence of such retries.
 
 For a declared endpoint conditioning-resolution target $`\sigma_0\in(0,1]`$, preselect $`t\leq\sigma_0\sin(g)/4`$ and $`b_{\mathrm{num}}\leq g/2`$, including all numerical margins. On the class with true minimum block singular value at least $`\sigma_0`$ and true phase $`\theta\geq4g`$, the endpoint confidence event guarantees $`\sigma\geq3\sigma_0/4`$, total angular radius at most $`g`$, and $`\theta_0\geq\theta-2g\geq2g`$. Thus it passes the fixed floor. Fixed-fraction statistical and numerical error allocations give
 

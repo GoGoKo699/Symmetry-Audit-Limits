@@ -117,7 +117,7 @@ The linked scientific statements and proofs are authoritative. This map does not
 ### M14 — Locate the phase accumulated by an excursion
 
 - **Central question:** Which term changes the determinant phase when the path temporarily mixes parity sectors?
-- **Understanding target:** Track the off-block correction in the determinant derivative, the inverse-block bound when $`q<1`$, and the Frobenius estimate involving $`\sqrt\ell`$. Explain why intermediate singularity cannot simply be ignored.
+- **Understanding target:** Track the off-block correction in the determinant derivative, the inverse-block bound when $`q\lt 1`$, and the Frobenius estimate involving $`\sqrt\ell`$. Explain why intermediate singularity cannot simply be ignored.
 - **Dependencies and story role:** Uses M05–M07 and M13 to replace exact conservation by a quantitative identity.
 - **Conceptual connection:** A phase obstruction becomes a speed bound once its only uncancelled derivative term is tied to measurable transfer.
 - **Sources:** Anchor §§2.5.2, 3.1; [phase–leakage identity, Lemma 1](../science/phase-leakage.md#the-phase-leakage-identity).
@@ -213,7 +213,7 @@ The linked scientific statements and proofs are authoritative. This map does not
 ### M26 — Declare a resolution floor before seeing data
 
 - **Central question:** Why is a merely positive estimated phase insufficient for a uniform resource guarantee?
-- **Understanding target:** Explain the predeclared $`g\in(0,\pi/32]`$, the rule to return inconclusive when $`\theta_0<g`$, and the resulting unconditional shot and timing-bin caps. Identify the completeness promise $`\theta\geq4g`$ with resolved endpoint conditioning.
+- **Understanding target:** Explain the predeclared $`g\in(0,\pi/32]`$, the rule to return inconclusive when $`\theta_0\lt g`$, and the resulting unconditional shot and timing-bin caps. Identify the completeness promise $`\theta\geq4g`$ with resolved endpoint conditioning.
 - **Dependencies and story role:** Combines M25 with the sampling cost in M24 to make the protocol's budget valid on every data record.
 - **Conceptual connection:** A statistical confidence event controls correctness; a declared resolution floor independently controls resource use, including rare bad estimates.
 - **Sources:** Anchor §§2.5.3, 7.1.2; [finite endpoint measurements](../science/audit-protocol.md#finite-endpoint-measurements), [hard audit caps](../science/audit-protocol.md#finite-timing-and-the-audit-decision), and [resources](../science/resources.md#leakage-audit-cost-and-physical-time). This floor argument is locally supplied.

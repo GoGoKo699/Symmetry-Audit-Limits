@@ -10,7 +10,7 @@ Work on exactly three qubits, with no additional quantum system, and set $`\hbar
 \Pi=Z_1Z_2Z_3,\qquad P_\pm=\frac{I\pm\Pi}{2}.
 ```
 
-Both parity sectors have dimension $`d=4`$. Let $`H(t)`$ be a measurable Hermitian Hamiltonian that is a sum of terms supported on at most two qubits. Assume $`\Vert H(t)\Vert \le J`$, where $`J>0`$ bounds the norm of the complete Hamiltonian. Let
+Both parity sectors have dimension $`d=4`$. Let $`H(t)`$ be a measurable Hermitian Hamiltonian that is a sum of terms supported on at most two qubits. Assume $`\Vert H(t)\Vert \le J`$, where $`J\gt 0`$ bounds the norm of the complete Hamiltonian. Let
 
 ```math
 \dot U(t)=-iH(t)U(t),\qquad U(0)=I.
@@ -47,14 +47,14 @@ For a parity-preserving unitary $`W=W_+\oplus W_-`$ define its normalized determ
 Here $`\mathrm{dist}(\phi,2\pi\mathbb Z)`$ denotes the absolute value of the nearest representative modulo $`2\pi`$. Equal sector dimensions make $`\vartheta`$ invariant under a global phase on $`W`$. For the witness targets
 
 ```math
-W_\theta=e^{-i\theta\Pi},\qquad0<\theta\le\pi/8,
+W_\theta=e^{-i\theta\Pi},\qquad0\lt \theta\le\pi/8,
 ```
 
 one has $`\vartheta(W_\theta)=\theta`$. The restriction to the nearest phase branch matters: for example, $`\vartheta(W_{\pi/4})=0`$.
 
 ## The phase-leakage identity
 
-**Lemma 1.** Wherever $`q(t)<1`$, the matrices $`A,D`$ are invertible. If $`q(t)<1`$ throughout $`[0,T]`$, the determinant ratio has a unique continuous phase lift $`\Phi(t)`$ with $`\Phi(0)=0`$. On a general nonsingular subinterval a lift exists after choosing its initial branch. Almost everywhere on such an interval,
+**Lemma 1.** Wherever $`q(t)\lt 1`$, the matrices $`A,D`$ are invertible. If $`q(t)\lt 1`$ throughout $`[0,T]`$, the determinant ratio has a unique continuous phase lift $`\Phi(t)`$ with $`\Phi(0)=0`$. On a general nonsingular subinterval a lift exists after choosing its initial branch. Almost everywhere on such an interval,
 
 ```math
 \dot\Phi(t)=-2\mathrm{Re}\mathrm{tr}
@@ -117,14 +117,14 @@ This identity isolates the relevant distinction. If parity is preserved througho
 
 ## Uniform leakage bounds
 
-**Theorem 2.** Suppose $`U(T)=e^{i\chi}W`$ for a parity-preserving $`W`$, and $`q(t)<1`$ throughout. Then
+**Theorem 2.** Suppose $`U(T)=e^{i\chi}W`$ for a parity-preserving $`W`$, and $`q(t)\lt 1`$ throughout. Then
 
 ```math
 \vartheta(W)\le
 J\int_0^T\frac{q(t)}{\sqrt{1-q(t)^2}}\,dt.
 ```
 
-In particular, a uniform worst-input leakage ceiling $`q(t)^2\le\epsilon<1`$ implies
+In particular, a uniform worst-input leakage ceiling $`q(t)^2\le\epsilon\lt 1`$ implies
 
 ```math
 T\ge
@@ -132,7 +132,7 @@ T\ge
 {J\sqrt\epsilon}.
 ```
 
-A uniform basis-averaged ceiling $`\ell(t)\le\epsilon<1/4`$ implies
+A uniform basis-averaged ceiling $`\ell(t)\le\epsilon\lt 1/4`$ implies
 
 ```math
 T\ge
@@ -165,7 +165,7 @@ The next bound does not assume small leakage at every instant. It also allows pa
 
 **Proof.** The function $`q`$ is $`J`$-Lipschitz, because $`\Vert U(t)-U(s)\Vert \le J|t-s|`$. Also $`q(0)=q(T)=0`$.
 
-If $`q(t)<1/2`$ for all $`t`$, Lemma 1 and Cauchy-Schwarz give
+If $`q(t)\lt 1/2`$ for all $`t`$, Lemma 1 and Cauchy-Schwarz give
 
 ```math
 8\vartheta(W)
@@ -185,14 +185,14 @@ Otherwise $`q`$ reaches $`1/2`$. A Lipschitz path starting and ending at zero mu
 Since $`\ell\ge q^2/4`$, this gives $`\overline\ell\ge1/(48L)`$. Finally,
 
 ```math
-6\vartheta(W)^2\le6(\pi/8)^2<1\le L,
+6\vartheta(W)^2\le6(\pi/8)^2\lt 1\le L,
 ```
 
 which implies $`1/(48L)\ge\vartheta(W)^2/(8L^2)`$. Both cases prove the claim. $`\square`$
 
 The constant $`1/8`$ is a convenient finite-action guarantee. The leading asymptotic constant is sharper.
 
-**Theorem 4.** Fix $`0<\theta\le\pi/8`$. Among all allowed paths of duration $`T=L/J`$ implementing $`W_\theta`$,
+**Theorem 4.** Fix $`0\lt \theta\le\pi/8`$. Among all allowed paths of duration $`T=L/J`$ implementing $`W_\theta`$,
 
 ```math
 \inf\overline\ell
@@ -225,7 +225,7 @@ The order of limits is fixed: the endpoint phase $`\theta`$ stays positive while
 An approximate endpoint does not have to commute exactly with parity. Compare it to an explicitly specified parity-preserving unitary $`W`$ using phase-optimized operator norm:
 
 ```math
-\inf_\chi\Vert U(T)-e^{i\chi}W\Vert \le\delta<1.
+\inf_\chi\Vert U(T)-e^{i\chi}W\Vert \le\delta\lt 1.
 ```
 
 Define
@@ -235,7 +235,7 @@ Define
 =\max\{0,\vartheta(W)-\arcsin\delta\}.
 ```
 
-Every conclusion of Theorem 2 remains true with $`\vartheta(W)`$ replaced by $`\vartheta_{\rm eff}`$. This includes its integrated inequality when $`q<1`$ throughout, and both uniform-ceiling bounds.
+Every conclusion of Theorem 2 remains true with $`\vartheta(W)`$ replaced by $`\vartheta_{\rm eff}`$. This includes its integrated inequality when $`q\lt 1`$ throughout, and both uniform-ceiling bounds.
 
 To see the endpoint correction, set $`E_+=e^{-i\chi}AW_+^\dagger`$ and similarly $`E_-=e^{-i\chi}DW_-^\dagger`$. Each satisfies $`\Vert E_\pm-I\Vert \le\delta`$. Every eigenvalue lies in the disk of radius $`\delta`$ about $`1`$, so its argument has absolute value at most $`\arcsin\delta`$. Each rank-four determinant phase changes by at most $`4\arcsin\delta`$; their ratio changes by at most $`8\arcsin\delta`$. Circular triangle inequality and the integrated phase identity give the result.
 

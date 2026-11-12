@@ -27,7 +27,7 @@ is two local and has norm $`\sqrt{h_x(t)^2+h_y(t)^2}`$. Thus its coefficients ma
 
 ## A latitude path with an exact endpoint
 
-**Proposition 1.** For $`J>0`$, $`0<\epsilon<1`$, and $`\theta>0`$, there is an exact two-local implementation of $`W_\theta=e^{-i\theta\Pi}`$ with
+**Proposition 1.** For $`J\gt 0`$, $`0\lt \epsilon\lt 1`$, and $`\theta\gt 0`$, there is an exact two-local implementation of $`W_\theta=e^{-i\theta\Pi}`$ with
 
 ```math
 q(t)^2=\ell(t)\le\epsilon,
@@ -36,7 +36,7 @@ JT=\theta\sqrt{\frac{1-\epsilon}{\epsilon}}
 +2\arcsin\sqrt\epsilon.
 ```
 
-For $`0<\theta\le\pi/8`$ this matches the uniform-leakage lower bound up to the additive ramp action $`2\arcsin\sqrt\epsilon`$.
+For $`0\lt \theta\le\pi/8`$ this matches the uniform-leakage lower bound up to the additive ramp action $`2\arcsin\sqrt\epsilon`$.
 
 **Construction.** Write $`s=\sqrt\epsilon`$, $`r=\sqrt{1-\epsilon}`$, and $`\alpha_0=\arcsin s`$. In each Pauli block use
 
@@ -101,7 +101,7 @@ It diverges as $`J/\sqrt\epsilon`$ when $`\epsilon\to0`$. The construction there
 
 ## Uniform ceilings and a true temporal mean
 
-For fixed $`0<\theta\le\pi/8`$, Proposition 1 and the converse imply
+For fixed $`0\lt \theta\le\pi/8`$, Proposition 1 and the converse imply
 
 ```math
 \lim_{\epsilon\to0}
@@ -149,7 +149,7 @@ Intermediate observations mean independent repetitions of the same repeatable pr
 Let
 
 ```math
-0=t_0<t_1<\cdots<t_M=T,
+0=t_0\lt t_1\lt \cdots\lt t_M=T,
 \qquad h_j=t_{j+1}-t_j,\quad h_{\max}=\max_jh_j.
 ```
 
@@ -159,7 +159,7 @@ Suppose an audit bounds $`q(t_j)\le\eta`$ at every grid point. The $`J`$-Lipschi
 q(t)\le\eta+J\min\{t-t_j,t_{j+1}-t\}.
 ```
 
-Set $`q_{\max}=\eta+Jh_{\max}/2`$. If $`q_{\max}<1`$, Lemma 1 gives the following bound on the determinant phase of a parity-preserving endpoint $`W`$:
+Set $`q_{\max}=\eta+Jh_{\max}/2`$. If $`q_{\max}\lt 1`$, Lemma 1 gives the following bound on the determinant phase of a parity-preserving endpoint $`W`$:
 
 ```math
 \vartheta(W)\le
@@ -183,7 +183,7 @@ For a uniform grid of spacing $`h`$ with exact sampled symmetry, this becomes
 
 The phase of an approximately implemented target is treated by replacing $`\vartheta(W)`$ with $`\vartheta_{\rm eff}`$ as defined in [phase-leakage.md](phase-leakage.md).
 
-A basis-averaged grid certificate is also possible. The function $`\sqrt{\ell(t)}`$ is $`J`$-Lipschitz. One proof differentiates $`\ell=\Vert C\Vert _F^2/4`$ and uses $`|\dot\ell|\le2J\sqrt\ell`$; the zero points follow by continuity. If $`\ell(t_j)\le\eta^2`$ and $`\eta+Jh_{\max}/2<1/2`$, the same numerator is valid with denominator
+A basis-averaged grid certificate is also possible. The function $`\sqrt{\ell(t)}`$ is $`J`$-Lipschitz. One proof differentiates $`\ell=\Vert C\Vert _F^2/4`$ and uses $`|\dot\ell|\le2J\sqrt\ell`$; the zero points follow by continuity. If $`\ell(t_j)\le\eta^2`$ and $`\eta+Jh_{\max}/2\lt 1/2`$, the same numerator is valid with denominator
 
 ```math
 \sqrt{1-4(\eta+Jh_{\max}/2)^2}.
@@ -193,7 +193,7 @@ Here the square root of a probability, rather than the probability itself, enter
 
 ## Exact spoofing between perfect samples
 
-**Proposition 2.** Let $`0<Jh\le\pi`$. On an interval of length $`h`$, define
+**Proposition 2.** Let $`0\lt Jh\le\pi`$. On an interval of length $`h`$, define
 
 ```math
 \omega=2\sqrt{(\pi/h)^2-J^2},
@@ -240,11 +240,11 @@ For $`Jh\to0`$,
 
 Reversing the drive orientation reverses the sign. Replacing $`J`$ by a drive amplitude $`a\le J`$ continuously tunes the total phase through every value between zero and $`Mf(Jh)`$. Thus a desired phase in that interval can be spoofed exactly; no approximation of the endpoint is needed.
 
-The measurable determinant phase is periodic. To identify it with an unwrapped target $`\theta`$, choose the tuned phase in $`0<\theta\le\pi/8`$. Large accumulated phases must not be counted as proportionally large observable signals after they wind around the phase circle.
+The measurable determinant phase is periodic. To identify it with an unwrapped target $`\theta`$, choose the tuned phase in $`0\lt \theta\le\pi/8`$. Large accumulated phases must not be counted as proportionally large observable signals after they wind around the phase circle.
 
 ## Matched grid-resolution order
 
-In the small-cell regime, the upper envelope and the exact spoof have the same order $`J^2Th`$. For a fixed meaningful phase tolerance $`0<\theta_{\rm tol}\le\pi/8`$, uniform deterministic parity samples therefore require spacing of order
+In the small-cell regime, the upper envelope and the exact spoof have the same order $`J^2Th`$. For a fixed meaningful phase tolerance $`0\lt \theta_{\rm tol}\le\pi/8`$, uniform deterministic parity samples therefore require spacing of order
 
 ```math
 h\asymp\frac{\theta_{\rm tol}}{J^2T},

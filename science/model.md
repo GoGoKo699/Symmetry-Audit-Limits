@@ -37,7 +37,7 @@ The principal quantities are:
 | $`\vartheta(U)=\mathrm{dist}(\arg\det A-\arg\det D,2\pi\mathbb Z)/8`$ | Endpoint phase distance, defined when both blocks are invertible and invariant under a common phase. |
 | $`\theta_0`$ | A lower confidence bound on the endpoint phase distance, derived from independent endpoint data. |
 
-The phase is circular and lies in $`[0,\pi/8]`$. It is not an unbounded accumulated phase. For $`e^{-i\theta\Pi}`$ with $`0<\theta\le\pi/8`$ the distance equals $`\theta`$; at $`\theta=\pi/4`$ the determinant obstruction vanishes. Arbitrary unitaries within either endpoint parity sector are allowed by the lower bounds.
+The phase is circular and lies in $`[0,\pi/8]`$. It is not an unbounded accumulated phase. For $`e^{-i\theta\Pi}`$ with $`0\lt \theta\le\pi/8`$ the distance equals $`\theta`$; at $`\theta=\pi/4`$ the determinant obstruction vanishes. Arbitrary unitaries within either endpoint parity sector are allowed by the lower bounds.
 
 ## Certificate and observation class
 

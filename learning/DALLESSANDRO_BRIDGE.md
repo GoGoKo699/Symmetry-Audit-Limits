@@ -116,10 +116,10 @@ This lower bound permits large excursions and singular intermediate blocks. It d
 
 Declare the phase floor $`g=1/16`$ and total failure budget $`\delta=0.05`$, split as $`\delta_E=\delta_A=0.025`$. The floor is fixed before observing data. It makes poorly resolved endpoint data inconclusive instead of allowing an arbitrarily small positive estimate to demand an arbitrarily large audit.
 
-For a fully explicit endpoint method, use the [six-qubit Choi tomography procedure](../science/audit-protocol.md#finite-endpoint-measurements). One permissible statistical tolerance is $`s=1/4000`$. Its state-matrix radius is $`e=8s=0.002`$, and its statistical propagator radius is $`4e/(1-e)<0.008017`$. Budget numerical matrix and singular-value errors inside a total radius $`t=0.01`$, and phase arithmetic error at most $`0.001`$. For the target’s true block singular values equal to one, a certified lower estimate $`\sigma\geq0.99`$ then gives total angular radius at most
+For a fully explicit endpoint method, use the [six-qubit Choi tomography procedure](../science/audit-protocol.md#finite-endpoint-measurements). One permissible statistical tolerance is $`s=1/4000`$. Its state-matrix radius is $`e=8s=0.002`$, and its statistical propagator radius is $`4e/(1-e)\lt 0.008017`$. Budget numerical matrix and singular-value errors inside a total radius $`t=0.01`$, and phase arithmetic error at most $`0.001`$. For the target’s true block singular values equal to one, a certified lower estimate $`\sigma\geq0.99`$ then gives total angular radius at most
 
 ```math
-\arcsin(0.01/0.99)+0.001<0.011102.
+\arcsin(0.01/0.99)+0.001\lt 0.011102.
 ```
 
 On the endpoint confidence event, this resolves more than enough phase to retain the conservative lower confidence bound $`\theta_0=1/8`$. Using only that much resolved phase keeps the arithmetic simple; a larger valid bound saves audit shots. A failed conditioning check or an endpoint lower bound below $`g`$ returns inconclusive.
