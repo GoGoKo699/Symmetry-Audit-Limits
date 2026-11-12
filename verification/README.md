@@ -15,7 +15,7 @@ The checks have the following scope:
 
 | Check | What is compared |
 | --- | --- |
-| Three-qubit control algebra | Full $8\times8$ Pauli identities, the 36 nonidentity one- and two-local basis elements, and their vanishing trace against parity. |
+| Three-qubit control algebra | Full $`8\times8`$ Pauli identities, the 36 nonidentity one- and two-local basis elements, and their vanishing trace against parity. |
 | Exact latitude controls | Hamiltonians reconstructed by differentiating the Euler propagator, their complete Pauli support, norm, forbidden coefficient, endpoint unitary, and maximum leakage. One complete path is also integrated independently as a Schrödinger ODE. |
 | Temporal mean | Leakage integrated from the matrix propagator versus the closed expression, followed by fixed-phase large-action examples approaching the leading coefficient one. This is a finite check of the formula and limiting trend. |
 | Grid spoof | Exact rotating-drive propagators, intermediate leakage, return at the cell endpoint, and the circular determinant phase after multiple windings. |
