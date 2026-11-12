@@ -26,3 +26,9 @@ The checks have the following scope:
 The deterministic perturbations in the endpoint check are test inputs, not statistically observed errors. Statistical coverage comes from the analytical tail bounds in the protocol. The example keeps the deliberately unoptimized 4095-setting endpoint cost visible rather than hiding it behind the fixed-dimension asymptotic notation.
 
 All comparisons use ordinary double-precision linear algebra with explicit tolerances. This suite is not interval arithmetic and does not itself provide certified numerical margins for laboratory data. A real endpoint certificate must include its numerical matrix and phase errors in the confidence radius, as the protocol requires.
+# Hosted mathematics
+
+The read-only `Hosted mathematics` pull-request workflow checks out the exact proposed commit, visits every tracked Markdown page on GitHub at widths 1440 and 760, and compares its rendered MathML with the source expressions. It retains actual HTML, screenshots and a source-bound report as a temporary Actions artifact. A person must still inspect the screenshots and compare the prose, tables and navigation with the source.
+
+The generic collectors in `hosted_math/` use Playwright 1.56.1 and MathJax 3.2.1. They do not authenticate, change GitHub settings, or establish the scientific claims. Run the collector locally with `--root`, `--repository`, `--revision` (a full commit SHA) and `--output` (a new evidence directory); use `probe_hosted_math.cjs` with exactly one `--page` for an early diagnostic. The artifact is a reproducible check, not permanent preservation.
+

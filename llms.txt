@@ -11,6 +11,7 @@ This repository studies the quantitative cost of auditing the instantaneous-symm
 - The audit-shot optimum concerns ordinary parity-definite preparation and parity-only intermediate measurement. It is not an unrestricted coherent-query or Hamiltonian-learning lower bound.
 - Endpoint phase estimation, every repeated prefix, reference width, known operations and finite timing are charged. No practical noisy-hardware crossover is established.
 - A phase-resolution floor is fixed before data collection; estimates below it return inconclusive. Hard caps hold on every branch, and matched shot scaling concerns the declared resolved-phase class.
+- The single educational anchor is D’Alessandro, Introduction to Quantum Control and Dynamics, second edition, DOI10.1201/9781003051268. Textbook foundations and locally supplied research/statistical arguments remain distinct.
 
 ## Question routes
 
@@ -21,5 +22,7 @@ This repository studies the quantitative cost of auditing the instantaneous-symm
 - Prefix time, reference width, timing bits, classical cost and limitations: science/resources.md.
 - Precise inherited theorems and primary comparison: references/related-work.md; references/references.bib.
 - Portable finite verification and expected outputs: verification/README.md; verification/run_checks.py; verification/results.json.
+- Learning entrypoint and targeted source reading: learning/README.md; learning/DALLESSANDRO_BRIDGE.md.
+- Exactly30project-intrinsic understanding targets and their dependencies: learning/MILESTONES.md.
 
 The full connected reading route is science/README.md. Read actual hypotheses before transferring a result to a different process or observation model. Numerical matrix checks support stated finite consequences and do not replace the universal proofs.

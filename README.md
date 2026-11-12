@@ -26,6 +26,12 @@ Start with the [scientific route](science/README.md). The [model](science/model.
 
 For attribution, read the [comparison with primary work](references/related-work.md) and [bibliography](references/references.bib). Exact determinant constraints, symmetry-based interaction spectroscopy, holonomic geometry and low-population controls are established ingredients. The [LLM reading guide](llms.txt) maps specific questions to the authoritative files.
 
+## Learn the project
+
+The single educational anchor is **Domenico D’Alessandro, *Introduction to Quantum Control and Dynamics*, second edition**, identified by [DOI 10.1201/9781003051268](https://doi.org/10.1201/9781003051268). The [learning route](learning/README.md) connects its Hamiltonian-control foundations to this project's question. The [source bridge](learning/DALLESSANDRO_BRIDGE.md) gives verified reading pointers, notation translations, the locally supplied arguments and a complete three-qubit example.
+
+The [30-milestone map](learning/MILESTONES.md) develops the prerequisites before following the phase witness, unavoidable hidden transfer, attaining controls and finite-confidence audit into one account. The map records project understanding targets for any reader; it contains no personal learner history.
+
 ## Reproduce the finite checks
 
 ```sh
