@@ -8,17 +8,25 @@ The measured signal is the relative determinant phase of the two parity blocks. 
 
 ## Principal results
 
-Let $`L=JT`$, where $`J`$ bounds the operator norm of the complete Hamiltonian and $`T`$ is the evolution duration. Let $`\theta\in(0,\pi/8]`$ be the normalized circular distance of the endpoint parity-block determinant phase. Write $`\bar\ell`$ for the parity-transition probability averaged over a uniformly chosen computational-basis input and stopping time.
+Let $`L=JT`$, where $`J`$ bounds the operator norm of the complete Hamiltonian and $`T`$ is the evolution duration. Let $`\theta\in(0,\pi/8]`$ be the normalized circular distance of the endpoint parity-block determinant phase. Write $`\bar\ell`$ for the parity-transition probability averaged over a uniformly chosen even-parity computational-basis input and a uniform stopping time.
 
 | Question | Supported result |
 | --- | --- |
-| How much leakage must a two-local explanation produce? | Every path with invertible endpoint parity blocks obeys $`\bar\ell\ge\theta^2/(32L^2)`$. For an exactly parity-preserving endpoint, the denominator improves to $`8L^2`$. |
+| How much leakage must a two-local explanation produce? | Every two-local path with invertible endpoint parity blocks obeys $`\bar\ell\ge\theta^2/(32L^2)`$. For an exactly parity-preserving endpoint, the denominator improves to $`8L^2`$. |
 | Is the leading mean-leakage coefficient sharp? | For the target family $`e^{-i\theta ZZZ}`$, $`\inf\bar\ell=(\theta^2+o(1))/L^2`$ as $`L\to\infty`$ at each fixed positive $`\theta`$. |
 | Can the witness be audited with finite data? | Endpoint tomography plus privately randomized parity tests excludes every allowed two-local explanation with a specified false-certification probability. |
 | What is the audit shot cost? | The matching order is $`\Theta((JT/\theta)^2\log(1/\delta))`$ for ordinary fresh-run, parity-only intermediate tests, at fixed endpoint conditioning and a declared phase-resolution floor comparable to $`\theta`$. |
 | Do perfect scheduled symmetry checks suffice? | Exact two-local loops pass every uniform-grid checkpoint while accumulating a false phase of order $`J^2Th`$, where $`h`$ is the spacing. |
 
 The lower bound for audit shots permits adaptively chosen stopping times and arbitrary endpoint data. It does not cover phase-sensitive intermediate probes or coherent queries. The protocol declares a minimum phase resolution before data collection and returns inconclusive below it, ensuring an unconditional hard resource cap. The matching construction attains the mean frontier for the stated target family; attainment for every parity-preserving endpoint is not claimed.
+
+## Run the audit
+
+1. Set the phase-resolution floor, endpoint precision and failure budgets before taking data. In each endpoint shot prepare three Bell pairs using Hadamards and CNOTs. Run the full waveform on the three device halves and keep the reference halves isolated. Rotate the six qubits into the required local Pauli bases, measure and multiply the relevant signs. Use the [endpoint reconstruction](science/audit-protocol.md#finite-endpoint-measurements) for linear inversion and the top-eigenvector reshape that estimates the endpoint matrix up to global phase. Compute a lower confidence bound for the relative determinant phase of the even and odd blocks, with numerical and sampling margins. Return inconclusive if the conditioning check fails or the bound is below the declared floor.
+2. Set the grid spacing and number of shots using the [finite timing rule](science/audit-protocol.md#finite-timing-and-the-audit-decision). On each fresh shot privately sample a grid midpoint and one of the four even-parity computational-basis strings 000, 011, 101 and 110, each uniformly and independently. Run the same waveform to that midpoint, which the device cannot anticipate. Measure Z parity and retain one bit. For local Z readout, XOR the three bits. An odd result counts as leakage.
+3. Issue the certificate only when the endpoint check passed and all scheduled audit shots showed even parity. A leakage event withholds the certificate. Under the trusted device, timing and strength assumptions, the certificate excludes the allowed two-local explanations with false-certification probability at most the sum of the endpoint and audit failure budgets.
+
+The [resource account](science/resources.md) charges the 4,095 nonidentity Pauli observables with repeated full-waveform runs, the separate prefix runs, fresh preparations and resets, readout, stopping precision and classical processing.
 
 ## Read the science
 
