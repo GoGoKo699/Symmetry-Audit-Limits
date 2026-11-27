@@ -1,0 +1,7 @@
+{
+  "README.md": ["Principal results", "Run the audit"],
+  "learning/DALLESSANDRO_BRIDGE.md": ["Worked example: two paths, one endpoint"],
+  "science/audit-protocol.md": ["Finite endpoint measurements", "Finite timing and the audit decision"],
+  "science/phase-leakage.md": ["The phase-leakage identity", "Uniform leakage bounds"],
+  "science/resources.md": ["Endpoint phase cost", "Leakage audit cost and physical time"]
+}
